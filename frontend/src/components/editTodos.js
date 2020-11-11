@@ -3,7 +3,7 @@ import React, { Fragment, useState } from 'react'
 const EditTodo = ({todo}) => {
     const [description, setDescription] = useState(todo.description);
 
-    {/* updat function */}
+     //Create updateDescription function
     const updateDescription = async e => {
         e.preventDefault();
         try {
@@ -16,6 +16,7 @@ const EditTodo = ({todo}) => {
             }
             );
             window.location = "/";
+            console.log(response);
         } catch (err) {
             console.error(err.message);
         }
